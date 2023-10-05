@@ -1,0 +1,41 @@
+.heading1{
+    font-weight: bold;
+    font-size: var(--size-1);
+    color: var(--gray600);    
+}
+
+.heading2{
+    font-weight: bold;
+    font-size: var(--size-2);
+    color: var(--gray600);    
+}
+
+.heading3{
+    font-weight: bold;
+    font-size: var(--size-3);
+    color: var(--gray600);    
+}
+
+.headline{
+    font-weight: normal;
+    font-size: var(--size-4);
+    color: var(--gray300);
+}
+
+.body{
+    font-weight: normal;
+    font-size: var(--size-5);
+    color: var(--gray300);
+}
+
+.body600{
+    font-weight: 500;
+    font-size: var(--size-5);
+    color: var(--gray300);
+}
+
+.caption{
+    font-weight: normal;
+    font-size: var(--size-6);
+    color: var(--gray300);
+}

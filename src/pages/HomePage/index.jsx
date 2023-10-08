@@ -1,25 +1,82 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CartModal } from "../../components/CartModal";
 import { Header } from "../../components/Header";
 import { ProductList } from "../../components/ProductList";
+import { burgerApi } from "../../components/Request";
 
 export const HomePage = () => {
-   const [productList, setProductList] = useState([]);
-   const [cartList, setCartList] = useState([]);
+   const localProduct = localStorage.getItem("@HamburKenzie");
 
-   // useEffect montagem - carrega os produtos da API e joga em productList
-   // useEffect atualização - salva os produtos no localStorage (carregar no estado)
-   // adição, exclusão, e exclusão geral do carrinho
-   // renderizações condições e o estado para exibir ou não o carrinho
+
+   const [cartList, setCartList] = useState(localProduct ?
+      JSON.parse(localProduct) : []);
+
+   const [modal, setModalVisible] = useState(true);
+
+   // renderiza
+   const [productList, setProductList] = useState([]);
+
+   const addToCart = (productToAdd) => {
+      const listItems = cartList.some((item) => item.id === productToAdd.id);
+
+      if(!listItems){
+         setCartList([...cartList, productToAdd]);
+         
+      }else{
+      //  toast 
+      }
+   }
+
+   const excludeAll = () => {
+      setCartList([])
+   }
+
+   const deleteById = (productId) => {
+      const newList = cartList.filter(list => list.id !== productId);
+
+      setCartList(newList)
+   }
+
+   useEffect(() => {
+      const getMenu = async () => {
+         try {
+            const { data } = await burgerApi.get("/products")
+            setProductList(data)
+         } catch (err) {
+            alert(err.message)
+         }
+      }
+      getMenu()
+   }, []);
+
+   useEffect(() => {
+      localStorage.setItem("@HamburKenzie", JSON.stringify(cartList));
+
+   }, [cartList]);
+
    // filtro de busca
-   // estilizar tudo com sass de forma responsiva
 
    return (
       <>
-         <Header />
+         <Header
+            cartList={cartList}
+            setModalVisible={setModalVisible}
+         />
          <main>
-            <ProductList productList={productList} />
-            <CartModal cartList={cartList} />
+            <ProductList
+               
+               productList={productList}
+               setCartList={setCartList}
+               addToCart={addToCart}
+            />
+
+            {!modal ? (<CartModal
+               deleteById={deleteById}
+               excludeAll={excludeAll}
+               cartList={cartList}
+               setModalVisible={setModalVisible} />)
+               : null}
+
          </main>
       </>
    );

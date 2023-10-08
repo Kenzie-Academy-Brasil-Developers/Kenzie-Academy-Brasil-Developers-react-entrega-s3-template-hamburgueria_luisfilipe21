@@ -1,41 +1,64 @@
 .heading1{
-    font-weight: bold;
+    font-weight: 700;
     font-size: var(--size-1);
-    color: var(--gray600);    
+    color: var(--gray600);
+    font-family: var(--font-primary)    
 }
 
 .heading2{
-    font-weight: bold;
+    font-weight: 700;
     font-size: var(--size-2);
-    color: var(--gray600);    
+    color: var(--gray600); 
+    font-family: var(--font-primary)   
 }
 
 .heading3{
-    font-weight: bold;
+    font-weight: 700;
     font-size: var(--size-3);
-    color: var(--gray600);    
+    color: var(--gray600);
+    font-family: var(--font-primary)
 }
 
 .headline{
-    font-weight: normal;
+    font-weight: 400;
     font-size: var(--size-4);
     color: var(--gray300);
+    font-family: var(--font-primary)
 }
 
 .body{
-    font-weight: normal;
+    font-weight: 400;
     font-size: var(--size-5);
     color: var(--gray300);
+    font-family: var(--font-primary)
 }
 
 .body600{
-    font-weight: 500;
+    font-weight: 600;
+    font-size: var(--size-5);
+    color: var(--primary);
+    font-family: var(--font-primary)
+}
+
+.body601{
+    font-weight: 600;
+    font-size: var(--size-5);
+    color: var(--gray600);
+    line-height: 24px;
+    font-family: var(--font-primary)
+}
+
+.body602{
+    font-weight: 600;
     font-size: var(--size-5);
     color: var(--gray300);
+    line-height: 24px;
+    font-family: var(--font-primary)
 }
 
 .caption{
-    font-weight: normal;
+    font-weight: 400;
     font-size: var(--size-6);
     color: var(--gray300);
+    font-family: var(--font-primary)
 }

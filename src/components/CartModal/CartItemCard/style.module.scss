@@ -1,0 +1,36 @@
+.itemList{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+
+    img{
+        background-color: var(--gray100);
+        width: 83px;
+        height: 80px;
+        border-radius: 5px;
+    }
+
+    &>div{
+        display: flex;
+        align-items: center;
+        
+
+        .itemInfo{
+            gap: 10px;  
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-left: 20px;
+        }
+
+    }
+
+    &>button{
+        color: #BDBDBD;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}

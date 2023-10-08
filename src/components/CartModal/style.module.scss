@@ -1,0 +1,73 @@
+.modalContainer {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    hr{
+        color: var(--gray300);
+        width: 92%;
+    }
+
+    .modalBox {
+        width: 397px;
+        max-height: 508px;
+        
+        background-color: #FFF;
+        
+        border-radius: 8px;
+
+        .modalHeader {
+            background: var(--primary);
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.875rem;
+            
+            h2{
+                color: white;
+            }
+
+            button {
+                border: none;
+                background: var(--primary);
+                color: rgba(255, 255, 255, 0.5);
+                cursor: pointer;
+            }
+        }
+
+        .modalList {
+            width: 100%;
+            height: fit-content;
+            box-sizing: border-box;
+            min-height: 100px;
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+
+        .modalRemove {
+            height: 7.5625rem;
+            width: 23rem;
+            margin: 0.9375rem;
+
+            &>div {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            button {
+                width: 100%;
+                margin-bottom: 1.125rem;
+                margin-top: 1.125rem;
+            }
+        }
+
+    }
+}

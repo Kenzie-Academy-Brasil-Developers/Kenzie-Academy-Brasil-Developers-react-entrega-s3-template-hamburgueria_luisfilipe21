@@ -9,12 +9,14 @@
 
     border-radius: 8px;
     background-color: var(--color-btn);
+    border: 2px solid var(--color-btn);
     color: #FFF;
 
     cursor: pointer;
 
-    & :hover{
+    &:hover{
         background-color: var(--primary);
+        border: 2px solid var(--primary);
     }
 }
 
@@ -29,11 +31,13 @@
 
     border-radius: 8px;
     background-color: var(--color-btn);
+    border: 2px solid var(--color-btn);
     color: #FFF;
 
     cursor: pointer;
 
-    & :hover{
+    &:hover{
         background-color: var(--primary);
+        border: 2px solid var(--primary);
     }
 }

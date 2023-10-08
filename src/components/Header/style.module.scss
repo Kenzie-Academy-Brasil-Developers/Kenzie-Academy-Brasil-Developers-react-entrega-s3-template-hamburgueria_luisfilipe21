@@ -1,0 +1,36 @@
+header {
+    background-color: var(--gray0);
+    padding: 1.5rem;
+    width: 100%;
+    
+    .headerBox {
+        display: flex;
+        justify-content: space-between;
+
+        .divShop {
+            position: relative;
+            width: 36px;
+            button {
+                border: none;
+                background-color: transparent;
+                color: #BDBDBD;
+                cursor: pointer;
+                span{
+                    position: absolute;
+
+                    top: -15px;
+                    right: -2px;
+                    background: var(--primary);
+                    border-radius: 7px;
+                    
+                    padding: 2px 5px;
+
+                    font-family: var(--font-primary);
+                    color: #FFF;
+                    font-size: var(--size-5);
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}

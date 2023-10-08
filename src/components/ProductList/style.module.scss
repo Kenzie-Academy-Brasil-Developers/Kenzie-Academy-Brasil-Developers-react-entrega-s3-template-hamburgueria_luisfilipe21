@@ -1,0 +1,20 @@
+.cardBox {
+    width:  460px;
+    height: 628px;
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+
+    @media(min-width: 600px){
+        max-width: 1358px;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 30px;
+        height: 102vh;
+        margin-bottom: 96px;
+        overflow: hidden;
+    }
+}

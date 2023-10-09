@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Logo from "../../assets/Logo.svg";
 import { MdSearch, MdShoppingCart } from "react-icons/md";
 import style from './style.module.scss';
 
 export const Header = ({cartList, setModalVisible}) => {
-   const [value, setValue] = useState("");
-   
+
    const totalItems = cartList.length;
    
    return (
